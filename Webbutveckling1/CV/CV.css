@@ -1,0 +1,13 @@
+header {
+    font-size: 100px;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://www.visitsmaland.se/thumbs/sv/upplevelser/natur-och-aventyr/cykel_vattern_low-ffef35f1d5a68d413961411abd6b0722-1800x1200.jpg") 
+}
+
+.container {
+    font-size: 25px;
+    text-align: center;
+}
