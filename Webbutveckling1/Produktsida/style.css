@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+  }
+  
+  .item {
+    flex-grow: 1;
+    height: 100px;
+  }
+  
+  .item + .item {
+    margin-left: 2%;
+  }
+
+.container-2 {
+    text-align: center;
+    
+}
+.container {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 400px;
+    margin: 5%;
+
+}
