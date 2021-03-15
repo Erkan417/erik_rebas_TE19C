@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://spelprogramering.nu/simple.js">
+
+        var cat = {x:  100, y:  100};
+        
+        hideMouse();
+        
+        playSound("http://spelprogrammering.nu/ljud/musik/Arkanoid_PSID_01", 0.5);
+        function update()
+        {
+            fill("black");
+        
+            picture(mouse.x, mouse.y, "http://spelprogrammering.nu/bilder/xwing/.png");
+            picture(cat.x, cat.y, "http://spelprogrammering.nu/bilder/tie.png");
+            
+            if (keyboard.d)
+                cat.x += cat.speed;
+            if (keyboard.a)
+                cat.x -= cat.speed;
+            if (keyboard.w)
+                cat.y -= cat.speed;
+            if (keyboard.s)
+                cat.y += cat.speed;
+        
+            var d = distance(mouse, cat);
+        
+            if (d < 40)
+            {
+                text(50, 50, 20, "Game over!", "red");
+                showMouse();
+                stopSound("http://spelprogrammering.nu/ljud/musik/Arkanoid_PSID_01");
+            }
+        } 
+</script>
+</body>
+</html>
