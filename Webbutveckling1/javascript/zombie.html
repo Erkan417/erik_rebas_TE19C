@@ -9,21 +9,49 @@
 <body>
     <script src="https://koda.nu/simple.js">
 
-    var zombie = {x: random(totalWidth),
-                  y: random(totalHeight),
-                  speed: random(1,5)};
-                  
-    function update()
-    {
-        clearScreen();
+      var zombies = [];
 
-        picture(zombie.x, zombie.y, "https:spelprogrammering.nu/bilder/zombie.png")
+      var i = 0;
 
-        if (zombie.x < mouse.x)
-          zombie.x + speed
-    }
-    circle(100, 100, 20, "red");
+      while (i < 10)
+      {
+        zombies.push({x: random(totalWidth),
+              y: random(totalHeight),
+              speed: random(1,5)});
+
+       i += 1;
+      }
+            
+        function update()
+        {
+          clearScreen();
+
+          var i = 0;
+
+          while (i < 10)
+          {
+            var zombie = zombies[i];
+
+            picture(zombie.x, zombie.y, "https:spelprogrammering.nu/bilder/zombie.png");
+
+            if (zombie.x < mouse.x)
+              zombie.x += zombie.speed;
+            else
+             zombie.x -= zombie.speed;
+        
+            if (zombie.y < mouse.y)
+              zombie.y += zombie.speed;
+            else
+              zombie.y -= zombie.speed;
+            if (distance(mouse, zombie) < 1)
+            {
+            alert("Game Over!");
+            stopUpdate();
+            }
+          }
+        }
+    
       
-      </script>
+    </script>
 </body>
 </html>
