@@ -16,10 +16,10 @@
       while (i < 10)
       {
         zombies.push({x: random(totalWidth),
-              y: random(totalHeight),
-              speed: random(1,5)});
+                      y: random(totalHeight),
+                      speed: random(1,5)});
 
-       i += 1;
+        i += 1;
       }
             
         function update()
@@ -45,7 +45,7 @@
               zombie.y -= zombie.speed;
             if (distance(mouse, zombie) < 1)
             {
-            alert("Game Over!");
+            //alert("Game Over!");
             stopUpdate();
             }
           }
