@@ -1,15 +1,15 @@
 p {
-    margin: 1px 50px 5px;
+    margin: 1px 50px 5px; /*radavstånd, avstånd från höger till vänster*/ 
   }
 
 h1 {
-    margin: 50px 50px 5px;
+    margin: 50px 50px 5px; /*radavstånd, avstånd från höger till vänster*/
 }
 
 header {
-    margin: 25px 50px 25px;
-    font-size: 5rem;
-    text-align: center;
+    margin: 25px 50px 25px; /*radavstånd, avstånd från höger till vänster*/
+    font-size: 5rem; 
+    text-align: center; /*centrerad rubrik*/
 }
 
 img {
@@ -18,7 +18,7 @@ img {
 }
 
 br {
-    margin: 1px 50px 1px
+    margin: 1px 50px 1px /*radbrytning*/
 }
 
 body {
